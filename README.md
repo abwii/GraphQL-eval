@@ -4,3 +4,13 @@ Wassim Bacha
 
 Réseau social fait en Vue
 Base de données en MySQL
+
+
+notes à moi même : 
+
+codegen coté client & server
+ne pas typer any dans user.ts
+récupérer le type de resolver depuis codegen
+https://graphql-fundamentals.vercel.app/server/codegen
+
+mettre dans le readme les instructions pour mysql
