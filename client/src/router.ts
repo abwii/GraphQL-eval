@@ -3,6 +3,7 @@ import Home from "@/views/Home.vue";
 import Login from "@/views/Login.vue";
 import Register from "@/views/Register.vue";
 import Articles from "@/views/Articles.vue";
+import CreateArticle from "./views/CreateArticle.vue";
 
 const routes = [
   { path: "/", component: Home },
@@ -13,6 +14,11 @@ const routes = [
     component: Articles,
     meta: { requiresAuth: true },
   },
+  {
+    path: "/articles/create",
+    component: CreateArticle,
+    meta: { requiresAuth: true },
+  }
 ];
 
 const router = createRouter({

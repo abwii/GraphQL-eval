@@ -28,8 +28,9 @@ const handleLogin = async () => {
     });
 
     if (result && result.data) {
-      alert("Connexion réussie ! Token: " + result.data.login);
+      alert("Connexion réussie !");
       localStorage.setItem("token", result.data.login);
+      window.location.href = "/";
     } else {
       alert("Erreur lors de la connexion.");
     }

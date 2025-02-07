@@ -30,7 +30,8 @@ const handleRegister = async () => {
     });
 
     if (result && result.data) {
-      alert("Inscription réussie ! Token: " + result.data.register);
+      alert("Inscription réussie !");
+      window.location.href = "/";
     } else {
       alert("Erreur lors de l'inscription.");
     }

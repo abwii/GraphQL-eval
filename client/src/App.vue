@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">GraphQL Social</a>
+      <a class="navbar-brand" href="/">𝕏²</a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item" v-if="!isAuthenticated">
@@ -12,6 +12,9 @@
           </li>
           <li class="nav-item" v-if="isAuthenticated">
             <router-link class="nav-link" to="/articles">Articles</router-link>
+          </li>
+          <li class="nav-item" v-if="isAuthenticated">
+            <router-link class="nav-link" to="/articles/create">Créer Article</router-link>
           </li>
           <li class="nav-item" v-if="isAuthenticated">
             <button class="btn btn-danger" @click="logout">Logout</button>
