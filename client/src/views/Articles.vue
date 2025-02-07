@@ -8,6 +8,7 @@ const GET_ARTICLES = gql`
     articles {
       id
       title
+      likes
       content
       author {
         username
@@ -37,7 +38,11 @@ onMounted(() => {
         <div class="card-body">
           <h5 class="card-title">{{ article.title }}</h5>
           <p class="card-text">{{ article.content }}</p>
-          <small class="text-muted">Auteur: {{ article.author.username }}</small>
+          <small class="text-muted">
+            Auteur : {{ article.author.username }}
+            <br>
+            👍 : {{ article.likes }}
+          </small>
         </div>
       </div>
     </div>
