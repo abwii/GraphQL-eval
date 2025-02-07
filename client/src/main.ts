@@ -4,6 +4,7 @@ import { DefaultApolloClient } from "@vue/apollo-composable";
 import App from "./App.vue";
 import { apolloClient } from "./apollo";
 import router from "./router";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const app = createApp(App);
 
