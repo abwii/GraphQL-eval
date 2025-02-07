@@ -47,6 +47,15 @@ export const resolvers = {
       return { token, user };
     },
 
+    likeArticle: async (_: any, { articleId }: { articleId: string }, context: { userId?: string }) => {
+      if (!context.userId) throw new Error("Not authenticated");
+    
+      return await prisma.article.update({
+        where: { id: articleId },
+        data: { likes: { increment: 1 } },
+      });
+    },
+        
     createArticle: async (
       _: unknown,
       { title, content }: { title: string; content: string },

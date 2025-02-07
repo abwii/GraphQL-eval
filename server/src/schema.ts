@@ -30,5 +30,6 @@ export const typeDefs = gql`
     signup(username: String!, email: String!, password: String!): AuthPayload
     login(email: String!, password: String!): AuthPayload
     createArticle(title: String!, content: String!): Article!
+    likeArticle(articleId: ID!): Article!
   }
 `;
