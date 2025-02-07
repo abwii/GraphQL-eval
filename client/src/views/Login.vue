@@ -29,7 +29,7 @@ const handleLogin = async () => {
 
     if (result && result.data) {
       alert("Connexion réussie !");
-      localStorage.setItem("token", result.data.login);
+      localStorage.setItem("token", result.data.login.token);
       window.location.href = "/";
     } else {
       alert("Erreur lors de la connexion.");

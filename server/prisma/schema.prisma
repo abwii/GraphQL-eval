@@ -9,7 +9,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "mysql" // Remplace par ton SGBD si nécessaire
   url      = env("DATABASE_URL")
 }
 
@@ -34,11 +34,11 @@ model Article {
 }
 
 model Comment {
-  id        String   @id @default(uuid())
+  id        String    @id @default(uuid())
   content   String
-  author    User     @relation(fields: [authorId], references: [id])
+  author    User      @relation(fields: [authorId], references: [id])
   authorId  String
-  article   Article  @relation(fields: [articleId], references: [id])
+  article   Article   @relation(fields: [articleId], references: [id])
   articleId String
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
 }
