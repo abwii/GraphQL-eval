@@ -1,0 +1,13 @@
+schema: "http://localhost:4000"
+schema: 
+  - "http://localhost:4000":
+      headers:
+        User-Agent: "JS GraphQL Codegen"
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+    config:
+      avoidOptionals: true
+      contextType: "./context#GraphQLContext"
