@@ -14,3 +14,10 @@ récupérer le type de resolver depuis codegen
 https://graphql-fundamentals.vercel.app/server/codegen
 
 mettre dans le readme les instructions pour mysql
+
+
+.env :
+```
+DATABASE_URL="mysql://root:@localhost:3306/social_network"
+JWT_SECRET="supersecretkey"
+```
